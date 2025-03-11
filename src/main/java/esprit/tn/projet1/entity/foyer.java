@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Collection;
 import java.util.Set;
 
 @Entity
@@ -25,5 +26,10 @@ public class foyer {
     @OneToOne
     @JoinColumn(name = "idUniversite", unique = true, nullable = false)
     private universite universite;
-            ;
+
+    public Collection<Bloc> getbloc() {
+        return java.util.List.of();
+    }
+
+
 }

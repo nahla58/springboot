@@ -25,8 +25,8 @@ public class chambre {
     @JoinColumn(name = "bloc_id")
     private Bloc bloc;
 
-    // Relation inverse ManyToMany avec Reservation
-    @ManyToMany(mappedBy = "chambres") // mappedBy fait référence à la variable 'chambres' de Reservation
+
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Reservation> reservations;
 
     // Getters and Setters
